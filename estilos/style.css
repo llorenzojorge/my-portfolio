@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*"Poppins"*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); /*"Raleway"*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); /*"Ubuntu"*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 14px;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: #2b2f4b;
+    color: white;
+}
+
+header #particulas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .textos-capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .textos-capa h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: "Ubuntu";
+}
+
+header .textos-capa h3 {
+    font-size: 1.5rem;
+}
+
+header .textos-capa .scroll {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: white;
+    transform: translate(0, 50%);
+    transition: all 0.5s;
+}
+
+header .textos-capa .scroll:hover {
+    opacity: 0.7;
+}
+
+header .textos-capa .scroll::before {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0;
+    }
+    15%, 45% {
+        opacity: 1;
+    }
+    60% {
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+#sobre, #caracteristicas {
+    background-color: #2b2f4b;
+    padding: 40px;
+}
+
+#sobre .header, #caracteristicas .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#sobre .header h1, #caracteristicas .header h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+#sobre .header a, #caracteristicas .header a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3 ease;
+}
+
+#sobre .header a:hover, #caracteristicas .header a:hover {
+    border-color: white;
+    box-shadow: none;
+}
+
+#sobre .card, #caracteristicas .card {
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3 ease;
+}
+
+#sobre .card:hover, #caracteristicas .card:hover {
+    border-color: white;
+    box-shadow: none;
+}
+
+#sobre .card img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#sobre .card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#sobre .card .info h1, #caracteristicas .card .info h1 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Ubuntu";
+}
+
+#sobre .card .info p, #caracteristicas .card .info p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#caracteristicas .caracteristicas-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#caracteristicas .caracteristicas-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#caracteristicas .caracteristicas-cards .card .info {
+    color: white;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#caracteristicas .caracteristicas-cards .card .info h1 {
+    text-align: center;
+}
+
+#caracteristicas .caracteristicas-cards .card .info p {
+    font-size: 1.1rem;
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b2f4b;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+    border-color: white;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 720px) {
+    header .textos-capa h1 {
+        font-size: 4rem;
+    }
+
+    header .textos-capa h3 {
+        font-size: 1.1rem;
+    }
+
+    #sobre .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre .card img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
