@@ -243,6 +243,10 @@ header .textos-capa .scroll::before {
     }
 }
 
+
+/*
+o h1 e h3 estavam bugados no celular, então ajustei tamanho e criei um texto personalizado diferente entre celular até 540 de largura. 03/05/24
+*/
 @media screen and (max-width: 540px) {
     header .textos-capa h1 {
         font-size: 3rem;
